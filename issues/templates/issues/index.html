@@ -1,0 +1,21 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block content %}
+<div class="container" style="background-color: rgba(242, 242, 242, 0.77);">
+<div class="col-md-12">
+  <h1>Это кек страница</h1>
+
+      {% for task in tasks %}
+      {{task.id}}<br>
+    <a href="{% url 'issues:details' task.id %}">{{task.title}}</a><br>
+        {{task.description}}<br>
+        {{task.priority}}<br>
+        {{task.date_start}}<br>
+        {{task.status}}<br>
+        {{task.assigned}}<br>
+        <hr>
+      {% endfor %}
+
+</div>
+</div>
+{% endblock %}

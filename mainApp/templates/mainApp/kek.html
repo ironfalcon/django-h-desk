@@ -1,0 +1,14 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block content %}
+<div class="container" style="background-color: rgba(242, 242, 242, 0.77);">
+<div class="col-md-12">
+  <h1>Это кек страница<h1>
+    <ul>
+      {% for val in keki %}
+      <li>{{val}}</li>
+      {% endfor %}
+    </ul>
+</div>
+</div>
+{% endblock %}
